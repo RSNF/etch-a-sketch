@@ -1,19 +1,45 @@
+@font-face {
+    font-family: Daydream;
+    src: url("./assets/fonts/Daydream.ttf");
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: whitesmoke;
     margin: 0px;
+    font-family: Daydream;
 }
 
-header, footer {
+header {
     background-color: #101010;
     padding: 25px;
-    text-align: center;
+    border-bottom: 2px solid #FFF;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+a, header {
+    text-decoration: dotted;
+    color: whitesmoke;
+}
+
+header h1 {
+    flex: 1;
+    font-size: 64px;
+}
+
+header p, header h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+header p {
+    line-height: 30px;
 }
 
 section {
-    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,9 +47,85 @@ section {
     gap: 10px;
 }
 
-a, header, footer {
-    text-decoration: none;
-    color: whitesmoke;
+input[type=range] {
+    appearance: none;
+    border: 2px solid black;
+    width: 150px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    background-color: black;
+    height: 25px;
+    width: 25px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background-color: #343434;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+input[type=checkbox]:hover {
+    background-color: whitesmoke;
+}
+
+input[type=checkbox]:checked {
+    background-color: black;
+}
+
+.etch-configs {
+    flex: 1;
+}
+
+.etch-configs div {
+    border: 2px solid black;
+    background-color: #FFF;
+    width: 500px;
+}
+
+.grid-edits {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    height: 50px;
+    padding: 0px 10px;
+}
+
+.colors-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 10px;
+}
+
+.colors-container .colors {
+    display: flex;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+
+.colors-container .colors div {
+    margin: 2px;
+}
+
+.grid-edits label {
+    flex: 2;
+}
+
+.etch-sect {
+    flex: 2;
+}
+
+.etch-container {
+    display: flex;
+    align-items: start;
 }
 
 .grid-container {
@@ -32,7 +134,7 @@ a, header, footer {
     display: flex;
     flex-wrap: wrap;
     background-color: #FFF;
-    border: 2px dotted #101010;
+    border: 2px solid #101010;
     margin: 0px;
     padding: 0px;
 }

@@ -10,15 +10,40 @@
   <body>
     <header>
       <h1>Etch-a-Sketch!</h1>
+      <div>
+        <p>Copyright 2024 <a href="https://github.com/RSNF" target="_blank">RSNF</a></p>
+        <p>Font by <a href="https://doublegum.gumroad.com/l/MeHRC">Doublegum</a></p>
+        <p>Idea by The Odin Project</p>
+      </div>
     </header>
-    <section>
-      <h2>Draw Something!</h2>
-      <div class="grid-container"></div>
-      <input type="range" id="gridInput" name="grid" min="1" max="100" />
-    </section>
-    <footer>
-      Copyright © 2024 <a href="https://github.com/RSNF" target="_blank">RSNF</a>
-    </footer>
+    <div class="etch-container">
+      <section class="etch-configs">
+        <h2>Change something</h2>
+        <h3>Anything!</h3>
+        <div class="grid-edits">
+          <label>Choose a grid size</label>
+          <input type="range" id="gridNum" min="1" max="100" value="16"/>
+        </div>
+        <div class="grid-edits">
+          <label>Draw by hovering</label>
+          <input type="checkbox" id="gridHover">
+        </div>
+        <div class="grid-edits">
+          <label>Rainbow trail</label>
+          <input type="checkbox" id="gridRainbow">
+        </div>
+        <div class="colors-container">
+          <label>Choose a color</label>
+          <div class="colors">
+          </div>
+        </div>
+      </section>
+      <section class="etch-sect">
+        <h2>Draw Something!</h2>
+        <h3>Anything!</h3>
+        <div class="grid-container"></div>
+      </section>
+    </div>
     <script type="module" src="./js/grid-utils.js"></script>
     <script type="module" src="./js/events.js"></script>
   </body>
